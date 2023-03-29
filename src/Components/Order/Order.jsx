@@ -1,15 +1,25 @@
 import React from 'react';
+import UiOrder from '../UiOrder/UiOrder';
 
-const Order = ({order}) => {
+const Order = ({ order }) => {
     // console.log(props)
     // const {order} = props
-    console.log(order)
+    // console.log(order)
+    let orderItems = [];
+    for (const item of order) {
+        orderItems.push(item.idMeal)
+        console.log(orderItems)
+    }
+
+
     return (
         <div>
             <h3 className='text-2xl font-semibold mt-3 mb-2 text-center'>Order Summary</h3> <hr />
-            <ol type='number'>
-                <li className='text-center'>Selected Item: {} </li>
-            </ol>
+            <div className='mt-5 mb-3'>
+                {
+                    orderItems.map(orItem => <UiOrder orItem={orItem} key={orItem}></UiOrder>)
+                }
+            </div>
         </div>
     );
 };
