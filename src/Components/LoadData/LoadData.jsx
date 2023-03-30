@@ -27,7 +27,7 @@ const LoadData = () => {
                     meals.map(meal => <Meals meal={meal} key={meal.idMeal} addToOrder={addToOrder}></Meals>)
                 }
             </div>
-            <div className='mr-4 bg-orange-500 rounded-lg'>
+            <div className='mr-4 bg-orange-500 rounded-lg p-10'>
                 <Order order={order}></Order>
             </div>
         </div>

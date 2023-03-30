@@ -5,11 +5,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
 const UiOrder = ({ orItem }) => {
     // console.log(orItem)
     return (
-        <div className='text-center mt-1'>
-            <ul>
-                <li><FontAwesomeIcon icon={faCheck} /> Ordered item: <span className='text-white'>{orItem}</span></li>
-            </ul>
-        </div>
+        <li style={{listStyleType: 'number'}}>Ordered item: <span className='text-white'>{orItem}</span> <FontAwesomeIcon icon={faCheck} /></li>
     );
 };
 
